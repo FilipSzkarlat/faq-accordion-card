@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+  position: relative;
+}
+
+#main-img {
+  position: absolute;
+  top: -110px;
+  width: 240px;
+  align-self: center;
+}
+
+#shadow-img {
+  position: relative;
+  align-self: center;
+  top: -20px;
+}
