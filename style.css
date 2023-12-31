@@ -62,7 +62,6 @@ h1 {
 }
 
 .answer {
-  display: none;
   padding-top: 15px;
   color: hsl(240, 6%, 50%);
 }
