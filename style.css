@@ -1,3 +1,4 @@
+/* GENERAL STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +17,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+/* CONTAINER */
 .container {
   display: flex;
   flex-direction: column;
@@ -26,19 +28,27 @@ body {
   position: relative;
 }
 
-#main-img {
+.img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* MOBILE IMAGE */
+#mobile-img {
   position: absolute;
   top: -110px;
   width: 240px;
   align-self: center;
 }
 
-#shadow-img {
+#mobile-shadow-img {
   position: relative;
   align-self: center;
   top: -20px;
 }
 
+/* BODY */
 h1 {
   text-align: center;
   padding-bottom: 20px;
@@ -64,4 +74,33 @@ h1 {
 .answer {
   padding-top: 15px;
   color: hsl(240, 6%, 50%);
+}
+
+/* FOOTER */
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 80%;
+}
+
+/* DESKTOP */
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .body-text,
+  .img {
+    width: 50%;
+  }
+
+  .body-text {
+    padding: 50px 50px 50px 0;
+  }
+
+  #mobile-img,
+  #mobile-shadow-img {
+    display: none;
+  }
 }
