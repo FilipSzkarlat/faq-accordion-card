@@ -25,13 +25,13 @@ body {
   background-color: white;
   border-radius: 25px;
   padding: 20px 20px 40px 20px;
-  position: relative;
 }
 
 .img {
-  width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  max-height: 380px;
 }
 
 /* MOBILE IMAGE */
@@ -46,6 +46,34 @@ body {
   position: relative;
   align-self: center;
   top: -20px;
+}
+
+/* DESKTOP IMAGE */
+#desktop-img,
+#desktop-women,
+#box-desktop {
+  display: none;
+  position: absolute;
+}
+
+#desktop-img {
+  bottom: -420px;
+  left: -560px;
+  transform: scale(0.8);
+}
+
+#box-desktop {
+  top: -50px;
+  left: -115px;
+  transform: scale(0.8);
+  z-index: 2;
+}
+
+#desktop-women {
+  align-self: center;
+  left: -120px;
+  transform: scale(0.8);
+  z-index: 1;
 }
 
 /* BODY */
@@ -85,22 +113,39 @@ h1 {
 }
 
 /* DESKTOP */
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
+  /* CONTAINER */
   .container {
     flex-direction: row;
+    max-width: 900px;
+    overflow: hidden;
   }
 
   .body-text,
   .img {
     width: 50%;
+    align-self: center;
   }
 
   .body-text {
-    padding: 50px 50px 50px 0;
+    padding: 50px 70px 50px 0;
   }
 
   #mobile-img,
   #mobile-shadow-img {
     display: none;
+  }
+
+  /* BODY RIGHT SIDE */
+  h1 {
+    text-align: start;
+    font-size: 25px;
+  }
+
+  /* BODY LEFT SIDE */
+  #desktop-img,
+  #box-desktop,
+  #desktop-women {
+    display: block;
   }
 }
